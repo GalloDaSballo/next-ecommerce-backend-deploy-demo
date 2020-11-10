@@ -8,6 +8,10 @@ const finder = require('strapi-utils/lib/finder');
  */
 
 module.exports = {
+    /**
+     * Only returns orders that belongs to the logged in user
+     * @param {any} ctx 
+     */
     async find(ctx) {
         const { user } = ctx.state //This is the magic user
 
@@ -20,7 +24,10 @@ module.exports = {
 
         return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.order }))
     },
-
+    /**
+     * Returns one order, as long as it belongs to the user
+     * @param {any} ctx 
+     */
     async findOne(ctx) {
         const { id } = ctx.params
         const { user } = ctx.state
