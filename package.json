@@ -9,7 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "knex": "<0.20.0",
     "sqlite3": "latest",
@@ -32,7 +31,7 @@
     "uuid": "c14016a6-d034-46f2-8c6c-0b2c3a4904b7"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.16.0 <= 14.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
